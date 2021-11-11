@@ -4,6 +4,7 @@ const path = require('path');
 
 let src = path.join(__dirname, '/assets');
 let des = path.join(__dirname, '/project-dist', '/assets');
+fs.mkdir(path.join(__dirname, 'project-dist'), {recursive: true}, (err)=>{if(err){console.log(err)}});
 
 /* Копируем папку assets */
 copyDir(src, des);
